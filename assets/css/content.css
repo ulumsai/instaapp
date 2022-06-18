@@ -1,0 +1,883 @@
+/* =============== START CSS HOME ============== */
+
+	.main-home{
+		margin-top: 100px;
+		height: 420px;
+		width: 100%;
+		display: flex;
+		flex-flow: row nowrap;
+	    max-width: 940px;
+	    align-items: stretch;
+	}
+
+	/* css untuk kirim status */
+	.status{
+		float: left;
+	    margin-right: 28px;
+	    max-width: 615px;
+	    width: 100%;
+	}
+	.buat-status{
+		width: 100%;
+		height: 150px;
+		margin-bottom: 20px;
+		max-width: 595px;
+	}
+
+	.tooltip {
+	    position: relative;
+	    display: inline-block;
+	    width: 100%;
+	}
+
+	.create-status{
+		resize: none;
+		background-color: white;
+		height: 80px;
+		border-radius: 10px;
+		border: 0;
+	    outline: none;
+	    overflow: hidden;
+	    text-overflow: ellipsis;
+	    border: 1px solid #82B1FF;
+	    border-radius: 3px;
+	    font-family: sans-serif;
+	    display:block;
+	    padding:10px;
+	    font-size: 15px;
+	    width: 100%;
+	}
+
+	.tooltip .tooltiptext {
+	    visibility: hidden;
+	    width: 200px;
+	    background-color: #757575;
+	    color: #fff;
+	    text-align: center;
+	    border-radius: 6px;
+	    padding: 5px 0;
+
+	    /* Position the tooltip */
+	    position: absolute;
+	    z-index: 1;
+	    bottom: 100%;
+	    left: 10%;
+	    margin-left: -60px;
+	    opacity: 0;
+	    transition: opacity 1s;
+	}
+
+	.tooltip:hover .tooltiptext {
+	    visibility: visible;
+	    opacity: 1;
+	}
+	input.button-post{
+		margin-top: 10px;
+		width: 70px;
+		height: 30px;
+		padding: 5px;
+		background-color: #0288D1;
+		color: white;
+		cursor: pointer;
+		border: none;
+		border-radius: 3px;
+		font-family: sans-serif;
+		float: left;
+	}
+	input.button-post:hover{
+		background-color: #0277BD;
+	}
+	.warning-red{
+		margin-left: 80px;
+		color: red;
+	}
+	.warning-green{
+		margin-left: 80px;
+		color: green;
+	}
+
+	/* css untuk menampilkan postingan */
+	.post{
+		margin-bottom: 50px;
+		background-color: white;
+		width: 100%;
+		max-width: 615px;
+		height: 400px;
+	    box-sizing: border-box;
+	    border: 1px solid #ddd;
+	}
+	.header-status{
+		border-bottom: 1px solid #efefef;
+		width: 100%;
+		max-width: 615px;
+		height: 30px;
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+	.profil-status{
+		width: 50px;
+	    height: 40px;
+	    margin-left: 20px;
+	    margin-top: -5px;
+	    float: left;
+	}
+	.foto-penstatus{
+		margin: 0 auto;
+		width: 40px;
+		border-radius: 100px;
+	}
+	.link-user{
+		padding-top: 5px;
+		margin-left: 50px;
+	}
+	.isi-status{
+		width: 100%;
+		height: 290px;
+		background-color: #EEEEEE;
+		font-size: 25px;
+	}
+	.p-status{
+		margin: 0 auto;
+		text-align: center;
+		padding: 20px;
+	}
+	.footer-status{
+		width: 100%;
+		height: 50px;
+		bottom: 0;
+		background-color: #E0E0E0;
+	}
+	.waktu-status{
+		float: right;
+		margin-right: 10px;
+	}
+
+	/* css untuk side kanan */
+	.home-kanan{
+		float: right;
+		height: 400px;
+	    margin-bottom: 30px;
+	    max-width: 300px;
+	    padding: 0;
+	    width: 100%;
+	    position: fixed;
+	    margin-right: 0%;
+	    margin-left: 640px;
+	}
+	.info-home-profil{
+		width: 100%;
+		height: 100px;
+	}
+	.foto-home{
+		width: 35%;
+		height: 100%;
+		float: left;
+	}
+	#FotoProfil{
+		margin: 0 auto;
+		width: 80px;
+		border-radius: 100px;
+		margin-left: 15%;
+		margin-top: 10%;
+	}
+	.row-info{
+		width: 65%;
+		height: 100%;
+		float: right;
+	}
+	.user{
+		color: #424242;
+		margin-top: 30px;
+		margin-bottom: 0px;
+	}
+	.nama{
+		margin-top: 0px;
+	}
+	.line-home{
+		width: 100%;
+		border: 1px solid #E0E0E0;
+	}
+
+	/* css daftar teman */
+	.friends-online{
+	    height: 300px;
+	    margin-bottom: 30px;
+	    max-width: 300px;
+	    width: 100%;
+	    background-color: #ddd;
+	    overflow-y: scroll;
+	}
+	.friends-list{
+		width: 100%;
+		height: 50px;
+		background-color: white;
+	}
+	.profil-teman-kanan{
+		margin-top:5px;
+		float: left;
+		display: flex;
+	}
+	.foto-teman-kanan{
+		margin: 0 auto;
+		width: 40px;
+		border-radius: 100px;
+	}
+	.link-teman-kanan{
+		padding-top: 15px;
+		margin-left: 50px;
+	}
+	.link-teman{
+		padding-top: 15px;
+		margin-left: 50px;
+	}
+	a{
+		color: #424242;
+		text-decoration: none;
+	}
+/* =============== END CSS HOME ================ */
+
+
+/* =============== START CSS PROFIL =============== */
+
+	.main-profil{
+		margin-top: 100px;
+	}
+	.header-profil{
+		width: 100%;
+		margin: 0 auto;
+		height: 100%;
+		min-height: 200px;
+	}
+	.foto-profil{
+		width: 35%;
+		height: 200px;
+		float: left;
+	}
+	#Foto-Profil{
+		margin: 0 auto;
+		width: 150px;
+		border-radius: 100px;
+		margin-left: 25%;
+		margin-top: 10%;
+	}
+	.info-profil{
+		width: 65%;
+		height: 200px;
+		float: right;
+	}
+	.row-user-profil{
+		width: 100%;
+		height: 50px;
+	}
+	.username-profil{
+		font-size: 30px;
+		color: #424242;
+	}
+	.col-follow-profil{
+		width: 120px;
+		float: left;
+	}
+	.button-row-profil{
+		margin-top: 20px;
+		display: flex;
+	}
+	.col-but-profil{
+		margin-left: 10px;
+	}
+	a.button-profil{
+		margin-top: 10px;
+		width: 20%;
+		background-color: gray;
+		color: white;
+		cursor: pointer;
+		border: none;
+		border-radius: 3px;
+		padding: 10px;
+	}
+	a.button-profil:hover{
+		background-color: #0277BD;
+	}
+	.status-profil{
+		margin-top: 20px;
+		margin-bottom: 50px;
+		width: 100%;
+	}
+	.row-status-profil{
+		width: 100%;
+		height: 300px;
+		display: flex;
+		margin-bottom: 7px;
+	}
+	.col-status-profil{
+		width: 32.7%;
+		height: 300px;
+		background-color: white;
+		margin-left: 5px;
+		border: 1px solid #9E9E9E;
+	}
+	.p-status-profil{
+		text-align: center;
+		padding: 20px;
+	}
+
+/* =============== END CSS PROFIL ============= */
+
+
+/* ============= START CSS LOGIN =============== */
+
+	.main-log{
+		min-height: 500px;
+		width: 100%;
+		margin: 0 auto;
+		margin-top: 100px;
+		height: 100%;
+	}
+	.info-reg-login{
+		text-align: right;
+		color: green;
+	}
+	.form-login{
+		width: 400px;
+		float: right;
+	}
+	.form-white-login{
+		width: 400px;
+		background-color: white;
+		margin-top: 10px;
+	    box-sizing: border-box;
+	    border: 1px solid #ddd;
+	    padding-bottom: 30px;
+	}
+	.title{
+		padding-top: 10px;
+		text-align: center;
+	}
+	p.title-top{
+		font-size: 20px;
+		font-weight: bold;
+	}
+	#logo-log{
+		width: 100px;
+	}
+	p.title2-top{
+		color: #757575;
+	}
+	.line-login{
+		width: 80%;
+	}
+	.row-login{
+		margin-left: 40px;
+		margin-right: 40px;
+	}
+	.col-login{
+		display: flex;
+		align-items: center;
+	}
+	input.in-text{
+		margin-top: 10px;
+		width: 100%;
+		height: 30px;
+		padding: 5px;
+		border: 0;
+	    -webkit-box-flex: 1;
+	    -webkit-flex: 1 0 0;
+	    -ms-flex: 1 0 0;
+	    flex: 1 0 0px;
+	    outline: none;
+	    overflow: hidden;
+	    padding: 9px 0 7px 8px;
+	    text-overflow: ellipsis;
+	    background:#fafafa;
+	    border: 1px solid #ddd;
+	    border-radius: 3px;
+	    font-family: sans-serif;
+	}
+	.in-text::-webkit-input-placeholder{
+		color: #BDBDBD;
+	}
+	input.button-login{
+		margin-top: 10px;
+		width: 100%;
+		height: 40px;
+		padding: 5px;
+		background-color: #0288D1;
+		color: white;
+		cursor: pointer;
+		border: none;
+		border-radius: 3px;
+		font-family: sans-serif;
+	}
+	input.button-login:hover{
+		background-color: #0277BD;
+	}
+	.log-error{
+		color: red;
+		font-size: 14px;
+		padding-left: 10px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		text-align: center;
+	}
+	.form-white-ask{
+		width: 400px;
+		background-color: white;
+		margin-top: 10px;
+	    box-sizing: border-box;
+	    border: 1px solid #ddd;
+	    font-family: sans-serif;
+	}
+	p.title-bottom{
+		text-align: center;
+		font-size: 15px;
+		color: #757575;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+	input.red-box{
+		border: 1px solid red;
+	}
+
+/* ========= END CSS LOGIN ========== */
+
+
+/* ========== START CSS REGISTER ========== */
+
+	.main-reg{
+		min-height: 300px;
+		width: 100%;
+		margin: 0 auto;
+		margin-top: 100px;
+		height: 100%;
+	}
+	.form-registrasi{
+		width: 450px;
+		float: right;
+		margin-bottom: 50px;
+	}
+	.form-white-reg{
+		width: 450px;
+		background-color: white;
+		margin-top: 10px;
+	    box-sizing: border-box;
+	    border: 1px solid #ddd;
+	    padding-bottom: 20px;
+	    font-family: sans-serif;
+	}
+	.title-reg{
+		padding-top: 10px;
+		text-align: center;
+	}
+	p.title-top-reg{
+		font-size: 20px;
+		font-weight: bold;
+	}
+	p.title2-top-reg{
+		color: #757575;
+	}
+	.line{
+		width: 80%;
+	}
+	#logo-reg{
+		width: 100px;
+	}
+	.row-reg{
+		margin-left: 40px;
+		margin-right: 40px;
+	}
+	.col-reg{
+		display: flex;
+		align-items: center;
+	}
+	.col-half-left{
+		width: 48%;
+		float: left;	
+	}
+	.col-half-right{
+		width: 47%;
+		padding-left: 18px;
+		right: 0;
+	}
+	p.reg-error{
+		color: red;
+		font-size: 14px;
+		padding-left: 10px;
+		margin-top: 5px;
+		margin-bottom: 10px;
+	}
+	select.red-box{
+		border: 1px solid red;
+	}
+	.label-gender{
+		margin-bottom: 5px;
+	}
+	.gender-box{
+		width: 100%;
+		padding: 15px;
+		box-sizing: border-box;
+	    border: 1px solid red;
+	    font-family: sans-serif;
+	}
+	input.button-reg{
+		margin-top: 10px;
+		width: 100%;
+		height: 40px;
+		padding: 5px;
+		background-color: #0288D1;
+		color: white;
+		cursor: pointer;
+		border: none;
+		border-radius: 3px;
+		font-family: sans-serif;
+	}
+	input.button-reg:hover{
+		background-color: #0277BD;
+	}
+	p.title-bottom{
+		text-align: center;
+		font-size: 15px;
+		color: #757575;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+	.ask-log{
+		width: 450px;
+	}
+/* ============ END CSS REGISTER ========= */
+
+
+/* ============ START CSS EDIT PROFIL =======*/
+
+	.main-edit{
+		min-height: 300px;
+		width: 100%;
+		margin: 0 auto;
+		margin-top: 100px;
+		height: 100%;
+	}
+	.form-edit{
+		width: 450px;
+		float: right;
+		margin-bottom: 50px;
+	}
+	.form-white-edit{
+		width: 450px;
+		background-color: white;
+		margin-top: 10px;
+	    box-sizing: border-box;
+	    border: 1px solid #ddd;
+	    padding-bottom: 50px;
+	    font-family: sans-serif;
+	}
+	.col-half-left{
+		width: 48%;
+		float: left;	
+	}
+	.row-edit{
+		margin-left: 40px;
+		margin-right: 40px;
+	}
+	.col-edit{
+		display: flex;
+		align-items: center;
+	}
+	.col-half-right{
+		width: 47%;
+		padding-left: 18px;
+		right: 0;
+	}
+	input.button-edit{
+		margin-top: 10px;
+		width: 100%;
+		height: 40px;
+		padding: 5px;
+		background-color: #0288D1;
+		color: white;
+		cursor: pointer;
+		border: none;
+		border-radius: 3px;
+		font-family: sans-serif;
+	}
+	input.button-edit:hover{
+		background-color: #0277BD;
+	}
+
+/* ============ END CSS EDIT PROFIL ==========*/
+
+
+/* ============ START CSS UBAH PASS ======== */
+
+	.main-ubah{
+		min-height: 300px;
+		width: 100%;
+		margin: 0 auto;
+		margin-top: 100px;
+		height: 100%;
+	}
+	.form-ubah{
+		width: 450px;
+		float: right;
+		margin-bottom: 50px;
+	}
+	.form-white-ubah{
+		width: 450px;
+		background-color: white;
+		margin-top: 10px;
+	    box-sizing: border-box;
+	    border: 1px solid #ddd;
+	    padding-bottom: 50px;
+	    font-family: sans-serif;
+	}
+	.row-ubah{
+		margin-left: 40px;
+		margin-right: 40px;
+	}
+	.col-ubah{
+		display: flex;
+		align-items: center;
+	}
+	input.button-ubah{
+		margin-top: 10px;
+		width: 100%;
+		height: 40px;
+		padding: 5px;
+		background-color: #0288D1;
+		color: white;
+		cursor: pointer;
+		border: none;
+		border-radius: 3px;
+		font-family: sans-serif;
+	}
+	input.button-ubah:hover{
+		background-color: #0277BD;
+	}
+
+/* ============= END CSS UBAH PASS ========*/
+
+
+/* ============ START CSS CARI TEMAN =======*/
+
+	.main-cari{
+		margin-top: 100px;
+		min-height: 450px;
+		height: 100%;
+		width: 100%;
+		flex-flow: row nowrap;
+	    max-width: 940px;
+	    align-items: stretch;
+	    margin-bottom: 50px;
+	}
+	.judul-cari{
+		height: 50px;
+		width: 100%;
+	}
+	h1.h1-teman{
+		padding-left: 20px;
+		padding-top: 5px;
+	}
+	.row-teman{
+		min-height: 100px;
+		width: 100%;
+		background-color: white;
+	}
+	.foto-cari{
+		width: 100px;
+		height: 100px;
+		background-color: #ECEFF1;
+		float: left;
+	}
+	.foto-cari-teman{
+		margin: 0 auto;
+		width: 70px;
+		border-radius: 50%;
+		padding : 15px;
+	}
+	.sub-nama{
+		padding-top: 25px;
+		padding-left: 120px;
+	}
+	a.link-cari-teman{
+		text-decoration: none;
+		font-size: 20px;
+		color: #0D47A1;
+	}
+	p.nama-cari-teman{
+		margin: 0;
+		font-size: 17px;
+	}
+
+/* ============ END CSS CARI TEMAN ==========*/
+
+
+/* ========== START CSS PROFIL TEMAN ==========*/
+
+	.main-profil-teman{
+		margin-top: 100px;
+	}
+	.header-profil-teman{
+		width: 100%;
+		margin: 0 auto;
+		height: 100%;
+		min-height: 200px;
+	}
+	.foto-profil-teman{
+		width: 35%;
+		height: 200px;
+		float: left;
+	}
+	#FotoProfil-teman{
+		margin: 0 auto;
+		width: 150px;
+		border-radius: 100px;
+		margin-left: 25%;
+		margin-top: 10%;
+	}
+	.info-profil-teman{
+		width: 65%;
+		height: 200px;
+		float: right;
+	}
+	.row-user-teman{
+		width: 100%;
+		height: 50px;
+	}
+	.username-teman{
+		font-size: 30px;
+		color: #424242;
+	}
+	.col-follow-teman{
+		width: 120px;
+		float: left;
+	}
+	.button-row-teman{
+		margin-top: 20px;
+		display: flex;
+	}
+	.col-but-teman{
+		margin-left: 10px;
+	}
+	.btn-ikuti{
+		background-color: gray;
+		color: white;
+		cursor: pointer;
+		border: none;
+		border-radius: 3px;
+		padding: 10px;
+	}
+	.btn-ikuti:hover{
+		background-color: #0277BD;
+	}
+
+	.status-teman{
+		margin-top: 20px;
+		margin-bottom: 50px;
+		width: 100%;
+	}
+	.row-status-teman{
+		width: 100%;
+		height: 300px;
+		display: flex;
+		margin-bottom: 7px;
+	}
+
+/* ======== END CSS PROFIL TEMAN ==========*/
+
+
+/* ========= START CSS PENGIKUT ==========*/
+
+	.main-pengikut{
+		margin-top: 100px;
+		min-height: 450px;
+		height: 100%;
+		width: 100%;
+		flex-flow: row nowrap;
+	    max-width: 940px;
+	    align-items: stretch;
+	    margin-bottom: 50px;
+	}
+	.judul-pengikut{
+		height: 50px;
+		width: 100%;
+	}
+	.row-pengikut{
+		min-height: 100px;
+		width: 100%;
+		background-color: white;
+	}
+	.foto{
+		width: 100px;
+		height: 100px;
+		background-color: #ECEFF1;
+		float: left;
+	}
+	.foto-pengikut{
+		margin: 0 auto;
+		width: 70px;
+		border-radius: 50%;
+		padding : 15px;
+	}
+	.nama-pengikut{
+		padding-top: 25px;
+		padding-left: 120px;
+	}
+	.pengikut-a{
+		text-decoration: none;
+		font-size: 20px;
+		color: #0D47A1;
+	}
+	.pengikut-p{
+		margin: 0;
+		font-size: 17px;
+	}
+
+/* =========== END CSS PENGKUT ============*/
+
+
+
+/* ========= START CSS PENGIKUT/MENGIKUTI ==========*/
+
+	.main-mengikuti{
+		margin-top: 100px;
+		min-height: 450px;
+		height: 100%;
+		width: 100%;
+		flex-flow: row nowrap;
+	    max-width: 940px;
+	    align-items: stretch;
+	    margin-bottom: 50px;
+	}
+	.judul-mengikuti{
+		height: 50px;
+		width: 100%;
+	}
+	.row-mengikuti{
+		min-height: 100px;
+		width: 100%;
+		background-color: white;
+	}
+	.foto{
+		width: 100px;
+		height: 100px;
+		background-color: #ECEFF1;
+		float: left;
+	}
+	.foto-mengikuti{
+		margin: 0 auto;
+		width: 70px;
+		border-radius: 50%;
+		padding : 15px;
+	}
+	.nama-mengikuti{
+		padding-top: 25px;
+		padding-left: 120px;
+	}
+	.mengikuti-a{
+		text-decoration: none;
+		font-size: 20px;
+		color: #0D47A1;
+	}
+	.mengikuti-p{
+		margin: 0;
+		font-size: 17px;
+	}
+
+/* =========== END CSS PENGKUT/MENGIKUTI ============*/
