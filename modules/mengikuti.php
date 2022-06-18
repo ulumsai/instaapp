@@ -11,7 +11,8 @@
 
 	include 'config/function.php';	// memanggil file fungsi
 	
-	$cariMengikuti = $ada = $nama = "";
+	$cariMengikuti = [] ;
+	$ada = $nama = "";
 
 	// untuk mengecek query string dengan variabel nama, daftar teman yang mengikuti akan dicari berdasar variabel nama
 	if(isset($_GET['nama']) and !empty($_GET['nama'])){
