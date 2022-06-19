@@ -26,7 +26,7 @@
 		global $koneksi;
 		try {
 		  // buat koneksi dengan database
-		  $koneksi = new PDO("mysql:host=localhost;dbname=social","root","");
+		  $koneksi = new PDO("mysql:host=localhost;dbname=instaapp","root","");
 		  
 		  // set error mode
 		  $koneksi->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
@@ -499,6 +499,41 @@
           	}
         }
         return $error;
+	}
+
+	function cekLike($idstatus,$user){
+		global $koneksi, $username;
+		$liked = 'unlike';
+		$data = $koneksi->query("SELECT * from `like` where id_status ='$idstatus' and penyuka ='$user' "); 
+		$dtlike = $data->rowCount() > 0;
+		if($dtlike){
+			$liked = 'like';
+		}
+		return $liked;
+	}
+
+	function likePost($idstatus,$user){
+		global $koneksi;
+		$data = $koneksi->query("SELECT * from `like` where id_status ='$idstatus' and penyuka ='$user' "); 
+		$dtlike = $data->rowCount() > 0;
+		if($dtlike){
+			$koneksi->query("DELETE from `like` where id_status ='$idstatus' and penyuka ='$user' "); 
+			$liked = 'unlike';
+		}else{
+			$data = $koneksi->query("SELECT * from `status` where id_status ='$idstatus'"); 
+			$data = $data->fetchAll(PDO::FETCH_ASSOC)[0];
+			$koneksi->query("INSERT INTO instaapp.`like` (penyuka,disuka,`timestamp`,id_status)
+				VALUES ('$user','".$data['username']."',now(),'$idstatus');"); 
+			$liked = 'like';
+		}
+		return $liked;
+	}
+
+	function getPost($id){	// fungsi untuk menampilkan status teman ketika membuka profil teman
+		global $koneksi;
+		$status = $koneksi->query("SELECT * FROM status WHERE id_status = '$id'");
+		$baris = $status->rowCount();
+		return $status->fetchAll(PDO::FETCH_ASSOC)[0];
 	}
 
 	// ===============

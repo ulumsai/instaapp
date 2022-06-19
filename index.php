@@ -103,16 +103,28 @@
 					case 'cari.teman':
 						include 'modules/cari.teman.php';
 						break;
+
+					case 'detailpost':
+						$id = $_GET['id'];
+						include 'config/function.php'; // memanggil file fungsi
+						$detailpost = getPost($id);
+						include 'modules/detailpost.php';
+						break;
+
+					case 'liked':
+						$id = $_GET['id'];
+						$user = $_GET['user'];
+						include 'config/function.php'; // memanggil file fungsi
+						likePost($id,$user);
+						header("Location:./");
+						break;
 					
 					default:		// jika query string tidak sempurna/ tidak ditemukan maka akan diarahke ke home
 						header("Location:./");
 						break;
 				}
-
 			}else{
-
 				// MAIN CONTENT INDEX
-
 		?>
 
 		<!-- code dibawah merupakan halam index / home dimana jika query string tidak ada yg cocok dengan module maka code dibawah yang akan dijalankan yang merupakan home atau index -->
@@ -195,9 +207,20 @@
 								</header>
 								<div class="isi-status">
 									<!-- untuk menampilkan status -->
-									<p class="p-status"><?php echo $value['status']; ?></p>
+									<a href="./?page=detailpost&id=<?php echo $value['id_status']; ?>"><p class="p-status"><?php echo $value['status']; ?></p></a> 
 								</div>
 								<div class="footer-status">
+									<div class="likekomen-status">
+										<div class="row">
+											<div class="col">
+												<?php $like = cekLike($value['id_status'],$user); ?>
+												<a href="./?page=liked<?php echo "&id=".$value['id_status']."&user=".$user; ?>"><img class="logo-like" src="assets/images/<?php echo $like; ?>.png" alt=""></a>
+											</div>
+											<div class="col">
+												<img class="logo-like" src="assets/images/comment.png" alt="">
+											</div>
+										</div>
+									</div>
 									<!-- untuk menampilkan tanggal dan waktu status dibuat -->
 									<div class="waktu-status">
 										<p><?php echo date('d F Y', strtotime($value['tgl_status'])); 

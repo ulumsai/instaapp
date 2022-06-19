@@ -151,6 +151,23 @@
 		float: right;
 		margin-right: 10px;
 	}
+	.likekomen-status{
+		float: left;
+		margin-left: 10px;
+	}
+	.logo-like{
+		width: 100%;
+		height: 40px;
+		display: flex;
+	}
+	.row {
+		display: flex;
+	}
+	  
+	.col {
+		flex: 33.33%;
+		padding: 5px;
+	}
 
 	/* css untuk side kanan */
 	.home-kanan{
@@ -206,6 +223,13 @@
 	    width: 100%;
 	    background-color: #ddd;
 	    overflow-y: scroll;
+	}
+	.list-komentar{
+	    height: 300px;
+	    margin-bottom: 30px;
+	    max-width: 300px;
+	    width: 100%;
+	    background-color: #ddd;
 	}
 	.friends-list{
 		width: 100%;
